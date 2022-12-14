@@ -7,10 +7,49 @@
         <title>Наши магазины</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/background.css">
         <style>
             body {
                 background-image: url(https://i.sunhome.ru/journal/118/magazin-geimera-v2.orig.jpg);
+            }
+
+
+            .sidenav {
+                height: 52%;
+                width: 205px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: red;
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+
+
+            .main {
+                margin-left: 205px;
+
+            }
+
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #f1f1f1;
+                display: block;
+                transition: 0.3s;
+            }
+
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+
+            #main {
+                transition: margin-left .5s;
+                padding: 20px;
             }
         </style>
     </head>
@@ -22,11 +61,26 @@
             <!--Хедер Страницы-->
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title" align="center">Интернет-магазин геймерских девайсов NeoFrag</h5>
+                    <a name="Home">
+                        <h5 class="card-title" align="center">Интернет-магазин геймерских девайсов NeoFrag</h5>
+                    </a>
                 </div>
             </div>
             <!--Конец хедера-->
+
+            <!--Боковое меню-->
+            <div id="mySidenav" class="sidenav">
+                <a href="#Home">В начало</a>
+                <a href="#MSC">Магазины в Москве</a>
+                <a href="#SPB">Магазины в Санкт-Петербурге</a>
+                <a href="#NN">Магазины в Нижнем Новгороде</a>
+                <a href="#EKB">Магазины в Екатеринбурге</a>
+            </div>
+            <!--Боковое меню-->
+
             <!--Начало навбара-->
+
+
             <div class="card text-center">
                 <div class="card-header">
                     <ul class="nav nav-tabs card-header-tabs">
@@ -41,15 +95,15 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="./keyboards.html"">Клавиатуры</a></li>
                                 <li><a class=" dropdown-item" href="./mice.html">Мыши</a></li>
-                                <li><a class="dropdown-item" href="./chairs.html">Кресла</a></li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="true" href="./form.html">Отправка заказа</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./shops.html"" role="
-                                button" aria-expanded="true">Наши магазины</a>
+                            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                                href="./shops.html"" role=" button" aria-expanded="true">Наши магазины</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#MSC">Москва</a></li>
                                 <li><a class=" dropdown-item" href="#SPB">Санкт-Петербург</a></li>
@@ -64,6 +118,7 @@
                         </li>
                     </ul>
                 </div>
+
 
                 <!--Конец навбара-->
 
@@ -112,7 +167,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag Нагатинская</h5>
                                 <p class="card-text">м. Нагатинская, ул. Нагатинская д.1 стр.12</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -128,15 +184,15 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://cdn1.flamp.ru/99bb6c8e8daf7f5b23d3f800f0b9b474.jpeg"
+                                        <img src="https://avatars.mds.yandex.net/get-altay/374295/2a0000015b16fa8ce5134ab756434d87e247/XXXL"
                                             class="d-block w-100" alt="нипалучаца" width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://ya-arhangelsk.ru/unimages/komps/4.jpg" class="d-block w-100"
-                                            alt="..." width="200" height="266">
+                                        <img src="https://avatars.mds.yandex.net/get-altay/1971563/2a0000016d8dba07117ae460436848661378/XXL"
+                                            class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://4frag.ru/image/cache/data/Stoly/Aksessuary/thunderx3-as5-hex-8-600x600.jpg"
+                                        <img src="https://avatars.mds.yandex.net/get-altay/1775373/2a0000016a52e4323a82c1285d21f5a8ebd2/XXL"
                                             class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                 </div>
@@ -154,7 +210,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag Белорусская</h5>
                                 <p class="card-text">м. Белорусская, ул. Верхняя д.14</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -170,15 +227,15 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://cdn1.flamp.ru/99bb6c8e8daf7f5b23d3f800f0b9b474.jpeg"
+                                        <img src="https://avatars.mds.yandex.net/get-altay/247136/2a0000015b18f249cdc5be3084636d90399d/XXL"
                                             class="d-block w-100" alt="нипалучаца" width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://ya-arhangelsk.ru/unimages/komps/4.jpg" class="d-block w-100"
-                                            alt="..." width="200" height="266">
+                                        <img src="https://new.sibvitr.ru/wp-content/uploads/2022/07/magaziny-kompyuterov-i-komplektuyushhih.jpg"
+                                            class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://4frag.ru/image/cache/data/Stoly/Aksessuary/thunderx3-as5-hex-8-600x600.jpg"
+                                        <img src="https://delta-online.ru/wp-content/uploads/delta/pav_photos/bd/asus/g12/g12_2.jpg"
                                             class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                 </div>
@@ -196,7 +253,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag Дмитровская</h5>
                                 <p class="card-text">м. Дмитровская, ул. Складочная д.1 стр.32</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -222,15 +280,15 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://cdn1.flamp.ru/99bb6c8e8daf7f5b23d3f800f0b9b474.jpeg"
+                                        <img src="https://www.sklad-generator.ru/upload/organization/images/dialog_1.jpg"
                                             class="d-block w-100" alt="нипалучаца" width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://ya-arhangelsk.ru/unimages/komps/4.jpg" class="d-block w-100"
-                                            alt="..." width="200" height="266">
+                                        <img src="https://i8.photo.2gis.com/images/branch/32/4503599646820711_f233.jpg"
+                                            class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://4frag.ru/image/cache/data/Stoly/Aksessuary/thunderx3-as5-hex-8-600x600.jpg"
+                                        <img src="https://delta-game.ru/wp-content/uploads/2018/10/igromir2018_gig3.png"
                                             class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                 </div>
@@ -248,7 +306,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag Невский</h5>
                                 <p class="card-text">м. Гостинный двор, Невский проспект д.35В</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -264,15 +323,15 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://cdn1.flamp.ru/99bb6c8e8daf7f5b23d3f800f0b9b474.jpeg"
+                                        <img src="https://www.3ona51.com/images/dxracerShowrooms/kharkov/1.jpg "
                                             class="d-block w-100" alt="нипалучаца" width="200" height="266">
                                     </div>
                                     <div class="carousel-item" width="200" height="266">
-                                        <img src="https://ya-arhangelsk.ru/unimages/komps/4.jpg" class="d-block w-100"
-                                            alt="...">
+                                        <img src="https://avatars.mds.yandex.net/get-altay/374295/2a0000015b17558cf3fb6f5c6da1eb1d5066/XXL"
+                                            class="d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://4frag.ru/image/cache/data/Stoly/Aksessuary/thunderx3-as5-hex-8-600x600.jpg"
+                                        <img src="https://avatars.mds.yandex.net/get-altay/1981910/2a000001760199e6464a8528ff8015ce28c1/XXXL"
                                             class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                 </div>
@@ -290,7 +349,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag Гражданка</h5>
                                 <p class="card-text">м. Гражданский проспект, ул. Черкасова д.12 к.2</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -306,15 +366,15 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://cdn1.flamp.ru/99bb6c8e8daf7f5b23d3f800f0b9b474.jpeg"
+                                        <img src="https://gameway.com.ua/wp-content/uploads/2012/11/Razer-epic-store_11.jpg"
                                             class="d-block w-100" alt="нипалучаца" width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://ya-arhangelsk.ru/unimages/komps/4.jpg" class="d-block w-100"
-                                            alt="..." width="200" height="266">
+                                        <img src="https://static.tildacdn.com/tild6133-3938-4362-a434-633538383337/Razer-epic-store_13.jpg"
+                                            class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://4frag.ru/image/cache/data/Stoly/Aksessuary/thunderx3-as5-hex-8-600x600.jpg"
+                                        <img src="https://i9.photo.2gis.com/images/branch/36/5066549616647628_9865.jpg"
                                             class="d-block w-100" alt="..." width="200" height="266">
                                     </div>
                                 </div>
@@ -332,7 +392,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag Электросила</h5>
                                 <p class="card-text">м. Электросила, ул. Варшавская д.6 к.2</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -357,12 +418,12 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://cdn1.flamp.ru/99bb6c8e8daf7f5b23d3f800f0b9b474.jpeg"
+                                        <img src="https://delta-online.ru/wp-content/uploads/delta/pav_photos/cheremushki/delta/2e-19/2e19_3.jpg"
                                             class="d-block w-100" alt="нипалучаца" width="200">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://ya-arhangelsk.ru/unimages/komps/4.jpg" class="d-block w-100"
-                                            alt="..." width="200">
+                                        <img src="https://digital-razor.ru/upload/resize_cache/iblock/e0c/800_600_1/e0cec603b014fcdd7c93d437b220219b.jpg"
+                                            class="d-block w-100" alt="..." width="200">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="https://4frag.ru/image/cache/data/Stoly/Aksessuary/thunderx3-as5-hex-8-600x600.jpg"
@@ -383,7 +444,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag ГАЗ</h5>
                                 <p class="card-text">м. Автозаводская, ул. Борская д.17П</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -425,7 +487,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag </h5>
                                 <p class="card-text">м. Буревестник, Соровское шоссе д.24 к.25</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
@@ -450,16 +513,16 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://cdn1.flamp.ru/99bb6c8e8daf7f5b23d3f800f0b9b474.jpeg"
+                                        <img src="https://4frag.ru/image/data/4frag-nagatinskaya-17.jpg"
                                             class="d-block w-100" alt="нипалучаца" width="200">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://ya-arhangelsk.ru/unimages/komps/4.jpg" class="d-block w-100"
-                                            alt="..." width="200">
+                                        <img src="http://i6.photo.2gis.com/images/branch/47/6614661983127441_4096.jpg"
+                                            class="d-block w-100" alt="..." width="200">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://4frag.ru/image/cache/data/Stoly/Aksessuary/thunderx3-as5-hex-8-600x600.jpg"
-                                            class="d-block w-100" alt="..." width="200">
+                                        <img src="https://avatars.mds.yandex.net/get-altay/374295/2a0000015b18f2c8e24b2f474800382733ae/XXL
+                                            class=" d-block w-100" alt="..." width="200">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel9"
@@ -476,26 +539,33 @@
                             <div class="card-body">
                                 <h5 class="card-title">NeoFrag Чкаловская</h5>
                                 <p class="card-text">м. Чкаловская, ул. Авиационная д.50</p>
-                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00 ежедневно</small>
+                                <p class="card-text"><small class="text-muted">Открыт с 10.00 до 22.00
+                                        ежедневно</small>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+
+            </div>
             <!--Футер страницы-->
-            <div>
-                <div class="card-body; d-flex justify-content-center">
-                    <h5 class="card-title">О компании</h5>
-                </div>
-            </div>
-            <!--Конец футера-->
+            <h5 class="card-title" align="center">О компании</h5>
+            <p>За дополнительной информацией можете обращаться по указанным контактам:</p>
+            <a href="https://vk.com/f4c3rxd"><img
+                    src="https://www.pinclipart.com/picdir/big/521-5211220_fifa-networking-vkontakte-service-icons-18-axe-clipart.png"
+                    align="left" target="_blank" height="50"><a>
+                    <a href="https://vk.com/f4c3rxd"><img src="https://cdn-icons-png.flaticon.com/512/408/408839.png"
+                            align="left" target="_blank" height="50"></a><br><br><br>
+                    Все права защищены
+        </div>
+        <!--Конец футера-->
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-                crossorigin="anonymous">
-                </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+            </script>
+
+
 
     </body>
 

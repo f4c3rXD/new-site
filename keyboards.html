@@ -11,6 +11,46 @@
       body {
         background-image: url(https://i.sunhome.ru/journal/118/magazin-geimera-v2.orig.jpg);
       }
+
+      .sidenav {
+        height: 37%;
+        width: 205px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: red;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+
+      .main {
+        margin-left: 205px;
+
+      }
+
+
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #f1f1f1;
+        display: block;
+        transition: 0.3s;
+        text-align: left;
+      }
+
+
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+
+
+      #main {
+        transition: margin-left .5s;
+        padding: 20px;
+      }
     </style>
   </head>
 
@@ -20,7 +60,9 @@
       <!--Хедер страницы-->
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title" align="center">Интернет-магазин геймерских девайсов NeoFrag</h5>
+          <a name="Home">
+            <h5 class="card-title" align="center">Интернет-магазин геймерских девайсов NeoFrag</h5>
+          </a>
         </div>
       </div>
 
@@ -34,12 +76,12 @@
                   alt="домашка" height="20px" width="20px"></a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
                 aria-expanded="false">Каталог</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./keyboards.html"">Клавиатуры</a></li>
+                <li><a class="dropdown-item active" href="./keyboards.html"">Клавиатуры</a></li>
                         <li><a class=" dropdown-item" href="./mice.html">Мыши</a></li>
-                <li><a class="dropdown-item" href="./chairs.html">Кресла</a></li>
+
               </ul>
             </li>
             <li class="nav-item">
@@ -61,47 +103,243 @@
             </li>
           </ul>
         </div>
-
         <!--Конец навбара-->
 
+        <!--Боковое меню-->
+        <div id="mySidenav" class="sidenav">
+          <a href="#Home"> В начало</a>
+          <a href="#Razer">Клавиатуры Razer</a>
+          <a href="#Corsair">Клавиатуры Corsair</a>
+          <a href="#HyperX">Клавиатуры HyperX</a>
+        </div>
+        <!--Боковое меню-->
+
         <!--Основное содержание страницы-->
+        <h5 class="card-title">Клавиатуры</h5>
         <div class="card-body">
-          <h5 class="card-title">Клавиатуры</h5>
+          <a name="Razer">
+            <h6 class="card-title">Клавиатуры Razer</h6>
+          </a>
           <div class="card-group">
             <div class="card">
-              <img src="..." class="card-img-top" alt="...">
+              <a href="https://static.razer.ru/public/XXrekTfUJ4WkFRTEwKQypj/deathstalker-v2-pro-1500x1000-1.jpg"
+                target="_blank"><img
+                  src="https://static.razer.ru/public/XXrekTfUJ4WkFRTEwKQypj/deathstalker-v2-pro-1500x1000-1.jpg"
+                  class="card-img-top" alt="..."></a>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Razer DeathStalker V2 Pro (Low-Profile Linear Optical Switches)
+                </h5>
+                <p class="card-text">Razer DeathStalker V2 Pro — сверхтонкая беспроводная оптическая клавиатуру,
+                  оптимизированная для обеспечения высочайшей производительности и долговечности. Оснащена новыми
+                  низкопрофильными переключателями Razer и технологией беспроводной связи Razer™ HyperSpeed для
+                  сверхбыстрого игрового процесса.</p>
+                <p class="card-text"><small class="text-muted">В наличии: много</small></p>
+                <p>Цена: 18000 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz1">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://static.razer.ru/public/Nmags8ptsZoyx2SMtJRMwg/deathstalker-v2-pro-tkl-1500x1000-1.jpg"
+                target="_blank"><img
+                  src="https://static.razer.ru/public/Nmags8ptsZoyx2SMtJRMwg/deathstalker-v2-pro-tkl-1500x1000-1.jpg"
+                  class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Razer DeathStalker V2 Pro TKL (Low-Profile Linear Optical Switches)</h5>
+                <p class="card-text">Высочайшая производительность и долговечность компактнее, чем когда-либо, с Razer
+                  DeathStalker V2 Pro TKL — беспроводной сверхтонкой оптической клавиатурой. Новые низкопрофильные
+                  переключатели Razer и технология беспроводной связи Razer™ HyperSpeed.</p>
+                <p class="card-text"><small class="text-muted">В наличии: достаточно</small></p>
+                <p>Цена: 19000 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz2">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="card">
-              <img src="..." class="card-img-top" alt="...">
+              <a href="https://static.razer.ru/235668/razer-blackwidow-v3-mini-hyperspeed-hero-photo.jpg"
+                target="_blank"><img
+                  src="https://static.razer.ru/235668/razer-blackwidow-v3-mini-hyperspeed-hero-photo.jpg"
+                  class="card-img-top" alt="..."></a>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Razer BlackWidow V3 Mini HyperSpeed (Yellow Switch)</h5>
+                <p class="card-text">Достаточно компактная для любого окружения и достаточно универсальная для любых
+                  настроек - это Razer BlackWidow V3 Mini HyperSpeed. Наслаждайтесь безупречной игрой в элегантном
+                  корпусе с беспроводной 65% механической игровой клавиатурой с идеальным балансом формы и функций.</p>
+                <p class="card-text"><small class="text-muted">В наличии: мало</small></p>
+                <p>Цена: 11500 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz3">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="card-body">
+          <a name="Corsair">
+            <h6 class="card-title">Клавиатуры Corsair</h6>
+          </a>
+          <div class="card-group">
+            <div class="card">
+              <a href="https://www.corsair.com/ru/ru/medias/sys_master/images/images/h1f/hf8/9873891360798/CH-910D018-NA/Gallery/K60_RGB_PRO_LP_01/-CH-910D018-NA-Gallery-K60-RGB-PRO-LP-01.png_1200Wx1200H"
+                target="_blank"><img
+                  src="https://www.corsair.com/ru/ru/medias/sys_master/images/images/h1f/hf8/9873891360798/CH-910D018-NA/Gallery/K60_RGB_PRO_LP_01/-CH-910D018-NA-Gallery-K60-RGB-PRO-LP-01.png_1200Wx1200H"
+                  class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">K60 RGB PRO Low Profile Mechanical Gaming Keyboard — CHERRY® MX Low Profile Speed
+                </h5>
+                <p class="card-text">В механической игровой клавиатуре CORSAIR K60 RGB PRO LOW PROFILE с тонким и
+                  прочным матовым алюминиевым корпусом, механическими переключателями клавиш CHERRY MX Low Profile SPEED
+                  и яркой RGB-подсветкой каждой клавиши стиль сочетается с весомостью.</p>
+                <p class="card-text"><small class="text-muted">В наличии: много</small></p>
+                <p>Цена: 14500 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz4">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <a href="https://www.corsair.com/ru/ru/medias/sys_master/images/images/h1b/h75/9686908141598/CH-912A014-NA/Gallery/K100_RGB_01/-CH-912A014-NA-Gallery-K100-RGB-01.png_1200Wx1200H"
+                target="_blank"><img
+                  src="https://www.corsair.com/ru/ru/medias/sys_master/images/images/h1b/h75/9686908141598/CH-912A014-NA/Gallery/K100_RGB_01/-CH-912A014-NA-Gallery-K100-RGB-01.png_1200Wx1200H"
+                  class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Механическая игровая клавиатура K100 RGB — CHERRY MX Speed — черный цвет</h5>
+                <p class="card-text">Бесподобная механическая игровая клавиатура CORSAIR K100 RGB отличается
+                  великолепной конструкцией из алюминия, RGB-подсветкой каждой клавиши, дизайном на основе мощной
+                  технологии сверхскоростной обработки CORSAIR AXON и переключателями клавиш CHERRY MX SPEED.</p>
+                <p class="card-text"><small class="text-muted">В наличии: достаточно</small></p>
+                <p>Цена: 22000 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz5">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <a href="https://www.corsair.com/medias/sys_master/images/images/h27/h18/9281569914910/-CH-925C015-NA-Gallery-K57-RGB-WIRELESS-NA-01.png"
+                target="_blank"><img
+                  src="https://www.corsair.com/medias/sys_master/images/images/h27/h18/9281569914910/-CH-925C015-NA-Gallery-K57-RGB-WIRELESS-NA-01.png"
+                  class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Механическая игровая клавиатура K95 RGB PLATINUM XT — CHERRY MX SPEED (NA Layout)
+                </h5>
+                <p class="card-text">Механическая игровая клавиатура CORSAIR K95 RGB PLATINUM XT заставит вашу
+                  настольную систему засиять благодаря динамической RGB-подсветке каждой клавиши. Клавиатура оснащена
+                  набором двухкомпонентных колпачков клавиш из ПБТ и шестью специальными клавишами для макросов.
+                  Предусмотрена интеграция клавиатуры с программным обеспечением Elgato Stream Deck.</p>
+                <p class="card-text"><small class="text-muted">В наличии: мало</small></p>
+                <p>Цена: 20000 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz6">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <a name="HyperX">
+            <h6 class="card-title">Клавиатуры HyperX</h6>
+          </a>
+          <div class="card-group">
+            <div class="card">
+              <a href="https://c.dns-shop.ru/thumb/st4/fit/wm/0/0/177698a098a0abe40edb40fcd6c7166c/fbbb9f15cd78236a78bb8f5650d6e4b2ef352061d1c4001967db4d719ab1f9fd.jpg.webp"
+                target="_blank"><img
+                  src="https://c.dns-shop.ru/thumb/st4/fit/wm/0/0/177698a098a0abe40edb40fcd6c7166c/fbbb9f15cd78236a78bb8f5650d6e4b2ef352061d1c4001967db4d719ab1f9fd.jpg.webp"
+                  class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Мембранная игровая клавиатура HyperX Alloy Core RGB</h5>
+                <p class="card-text">Игровая клавиатура HyperX Alloy Core RGB – модель мембранного типа с фирменной
+                  световой полоской HyperX и динамической многоцветной подсветкой. Оптимальный вариант для геймеров,
+                  которые ищут бюджетное, но стильное решение.</p>
+                <p class="card-text"><small class="text-muted">В наличии: много</small></p>
+                <p>Цена: 7000 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz7">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <a href="https://c.dns-shop.ru/thumb/st1/fit/0/0/96d01e778472d9c26207e272e7692cd1/dd639af81e200dcfbcd3794756410c5bd3e875ef52be3bf735327969c50588f0.jpg.webp"
+                target="_blank"><img
+                  src="https://c.dns-shop.ru/thumb/st1/fit/0/0/96d01e778472d9c26207e272e7692cd1/dd639af81e200dcfbcd3794756410c5bd3e875ef52be3bf735327969c50588f0.jpg.webp"
+                  class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Механическая игровая клавиатура HyperX Alloy Elite 2</h5>
+                <p class="card-text">Клавиатура HyperX Alloy Elite 2 − надежное игровое устройство, которое содержит 111
+                  клавиш и оснащена регулируемой RGB-подсветкой. Среди основных клавиш и цифрового блока выделяются
+                  дополнительные кнопки, позволяющие управлять функциями мультимедиа, подсветкой, а также
+                  программируемые кнопки. </p>
+                <p class="card-text"><small class="text-muted">В наличии: достаточно</small></p>
+                <p>Цена: 18000 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz8">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card">
+              <a href="https://c.dns-shop.ru/thumb/st1/fit/wm/0/0/ed3e3a33195c9e0544b9540b10e45b93/0d2335f5369b32166df3b8abd85584a146dc19537f9e09642293f9f150922a30.jpg.webp"
+                target="_blank"><img
+                  src="https://c.dns-shop.ru/thumb/st1/fit/wm/0/0/ed3e3a33195c9e0544b9540b10e45b93/0d2335f5369b32166df3b8abd85584a146dc19537f9e09642293f9f150922a30.jpg.webp"
+                  class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Механическая игровая клавиатура HyperX Alloy Origins
+                </h5>
+                <p class="card-text">Клавиатура HyperX Alloy Origins с фирменными линейными свитчами HyperX и
+                  сбалансированными характеристиками обеспечивает увлекательный игровой процесс с точным контролем.
+                  Интегрированные светодиоды с открытой конструкцией позволяют формировать привлекательные эффекты.</p>
+                <p class="card-text"><small class="text-muted">В наличии: мало</small></p>
+                <p>Цена: 13000 рублей</p>
+                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'>
+                  <p>Заказать: <input type="number" name="kb_numb_poz9">шт.
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <!--Футер страницы-->
-      <div class="card-body; d-flex justify-content-center">
-        <h5 class="card-title">О компании</h5>
-      </div>
-      <!--Конец футера-->
+      <h5 class="card-title" align="center">О компании</h5>
+      <p>За дополнительной информацией можете обращаться по указанным контактам:</p>
+      <a href="https://vk.com/f4c3rxd"><img
+          src="https://www.pinclipart.com/picdir/big/521-5211220_fifa-networking-vkontakte-service-icons-18-axe-clipart.png"
+          align="left" target="_blank" height="50"><a>
+          <a href="https://vk.com/f4c3rxd"><img src="https://cdn-icons-png.flaticon.com/512/408/408839.png" align="left"
+              target="_blank" height="50"></a><br><br><br>
+          Все права защищены
+    </div>
+    <!--Конец футера-->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">

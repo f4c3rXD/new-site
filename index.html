@@ -31,9 +31,9 @@
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-              <a class="nav-link" aria-current="true" href="./index.html"><img
+              <a class="nav-link active" aria-current="true" href="./index.html"><img
                   src="https://banner2.cleanpng.com/20180409/kaq/kisspng-house-home-insurance-button-leonardo-dicaprio-5acb151f1a3ea0.2256504315232586551075.jpg"
-                  alt="домашка" height="20px" width="20px"></a>
+                  alt="домашка" height="20px" width="20px" aria-current="page"></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -41,11 +41,11 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="./keyboards.html"">Клавиатуры</a></li>
                         <li><a class=" dropdown-item" href="./mice.html">Мыши</a></li>
-                <li><a class="dropdown-item" href="./chairs.html">Кресла</a></li>
+
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="true" href="./form.html">Отправка заказа</a>
+              <a class="nav-link" href="./form.html">Отправка заказа</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./shops.html"" role=" button"
@@ -68,23 +68,98 @@
 
 
         <div class="card-body">
-          <h5 class="card-title">Главная страница</h5>
-          <p class="card-text">Содержание главной страницы</p>
-          <a href="https://www.hse.ru/" class="btn btn-primary" target="_blank">Ссылка с главной страницы</a>
+          <h5 class="card-title">О нас</h5>
+          <div class="card-body">
+
+            <p class="card-text">NeoFrag - новый киберспортивный магазин. NeoFrag.com - новый бренд, занимающийся
+              продажей игровых товаров, в том числе и аксессуаров. Компания NeoFrag была основана в 2014 году, и в
+              настоящее время является одним из лидеров на рынке киберспорта. Интернет-магазин NeoFrag предлагает
+              большой ассортимент товаров: игровые аксессуары и комплектующие, игровые консоли, геймерские ноутбуки,
+              одежду и экипировку для киберспортсменов, а также игровые коврики и аксессуары. Все товары магазина
+              NeoFrag являются качественными и оригинальными.
+            </p>
+            <h5>Наши спонсоры</h5>
+            <img src="https://thunder-x3.ru/upload/iblock/661/4frag_logo2_h.png" height="250" align="left">
+            <img src="https://app-esdsynd-fairy-prod.azurewebsites.net/images/logo-mvideo.png" height="250">
+            <img src="https://egamersworld.com/uploads/dota2/teams/virtuspro-logo.png" height="250" align="center">
+          </div>
+
+          <!-- поле ввода первого числа -->
+          <h5>Калькулятор (на случай необходимости)</h5>
+          <p>Введите первое число</p>
+
+          <input id="num1" size="5" name="ch1">
+
+          <!-- блок с кнопками -->
+          <div id="operator_btns" text-align: left>
+            <button name="plus" id="plus" onclick="op='+'">+</button>
+            <button name="minus" id="minus" onclick="op='-'">-</button>
+            <button name="mnozh" id="times" onclick="op='*'">x</button>
+            <button name="del" id="divide" onclick="op='/'">:</button>
+          </div>
+
+          <!-- поле ввода второго числа -->
+          <p>Введите второе число</p>
+          <input id="num2" size="5" name="ch2">
+          <br>
+
+          <!-- кнопка для рассчётов -->
+          <p>Ваш результат</p>
+          <button onclick="func()">Посчитать</button>
+
+          <p id="result" name="res"></p>
+
+
         </div>
       </div>
 
       <!--Футер страницы-->
-      <div class="card-body; d-flex justify-content-center">
-        <h5 class="card-title">О компании</h5>
-      </div>
-      <!--Конец футера-->
+      <h5 class="card-title" align="center">О компании</h5>
+      <p>За дополнительной информацией можете обращаться по указанным контактам:</p>
+      <a href="https://vk.com/f4c3rxd"><img
+          src="https://www.pinclipart.com/picdir/big/521-5211220_fifa-networking-vkontakte-service-icons-18-axe-clipart.png"
+          align="left" target="_blank" height="50"><a>
+          <a href="https://vk.com/f4c3rxd"><img src="https://cdn-icons-png.flaticon.com/512/408/408839.png" align="left"
+              target="_blank" height="50"></a><br><br><br>
+          Все права защищены
+
+          <!--Конец футера-->
+
 
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
       </script>
+    <script>
+      // переменная c действием
+      var op;
+
+      // функция расчёта
+      function func() {
+        // переменная для результата
+        var result;
+        // получаем первое и второе число
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        // смотрим, что было в переменной с действием, и действуем исходя из этого
+        switch (op) {
+          case '+':
+            result = num1 + num2;
+            break;
+          case '-':
+            result = num1 - num2;
+            break;
+          case '*':
+            result = num1 * num2;
+            break;
+          case '/':
+            result = num1 / num2;
+            break;
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+
 
   </body>
 

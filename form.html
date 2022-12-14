@@ -11,6 +11,10 @@
       body {
         background-image: url(https://i.sunhome.ru/journal/118/magazin-geimera-v2.orig.jpg);
       }
+
+      table {
+        background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614345555_74-p-svetlo-serii-fon-dlya-prezentatsii-79.png);
+      }
     </style>
   </head>
 
@@ -24,7 +28,6 @@
         </div>
       </div>
       <!--Конец хедера-->
-
 
       <!--Начало навбара-->
       <div class="card text-center">
@@ -41,11 +44,11 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="./keyboards.html"">Клавиатуры</a></li>
                         <li><a class=" dropdown-item" href="./mice.html">Мыши</a></li>
-                <li><a class="dropdown-item" href="./chairs.html">Кресла</a></li>
+
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="true" href="./form.html">Отправка заказа</a>
+              <a class="nav-link active" aria-current="true" href="./form.html">Отправка заказа</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./shops.html"" role=" button"
@@ -66,19 +69,45 @@
         <!--Конец навбара-->
 
         <div class="card-body">
-          <h5 class="card-title">Форма заказа</h5>
+          <h5 class="card-title">Отправка заказа</h5>
+          <h6 align="left">Инструкция по заполнению формы отправки заказа</h6>
+          <ol align="left">
+            <li>Укажите Вашу фамилию</li>
+            <li>Укажите Ваше имя</li>
+            <li>Укажите Ваш Логин на сайте</li>
+            <ul>
+              <li>Если у Вас уже есть учетная запись на нашем сайте, введите уже существующий логин.</li>
+              <li>Если у Вас еще нет учетной записи на нашем сайте, обратитесь к администратору.</li>
+            </ul>
+            <li>Укажите Ваш город проживания</li>
+            <ul>
+              <li>Если Ваш город есть в списке, администратор свяжется с Вами для уточнения условий доставки</li>
+              <li>В случае, если Вашего города нет в списке, выберите нужный пункт в меню и свяжитесь с
+                администратором - мы попробуем предложить Вам индвидуальные условия доставки.</li>
+            </ul>
+            <li>Укажите Ваш индекс</li>
+            <li>Укажите Ваш адрес</li>
+            <li>Укажите Ваш E-mail</li>
+            <li>Укажите Ваш номер телефона</li>
+            <li>Проверьте правильность введенных данных</li>
+            <li>Нажмите кнопку "Отправить заказ"</li>
+            <li>Ожидайте звонка от нашего администратора</li>
+
+          </ol>
+
+          <h5>Форма отправки личных данных</h5>
           <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get' target='_self'
             class="row g-3 needs-validation" novalidate>
             <div class="col-md-4 position-relative">
               <label for="validationTooltip01" class="form-label">Фамилия</label>
-              <input type="text" class="form-control" id="validationTooltip01" name="Фамилия" value="" required>
+              <input type="text" class="form-control" id="validationTooltip01" name="Surname" value="" required>
               <div class="valid-tooltip">
                 Looks good!
               </div>
             </div>
             <div class="col-md-4 position-relative">
               <label for="validationTooltip02" class="form-label">Имя</label>
-              <input type="text" class="form-control" id="validationTooltip02" name="Имя" value="" required>
+              <input type="text" class="form-control" id="validationTooltip02" name="Name" value="" required>
               <div class="valid-tooltip">
                 Looks good!
               </div>
@@ -87,7 +116,7 @@
               <label for="validationTooltipUsername" class="form-label">Логин для сайта</label>
               <div class="input-group has-validation">
                 <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                <input type="text" name="Логин" class="form-control" id="validationTooltipUsername"
+                <input type="text" name="Login" class="form-control" id="validationTooltipUsername"
                   aria-describedby="validationTooltipUsernamePrepend" required>
                 <div class="invalid-tooltip">
                   Please choose a unique and valid username.
@@ -95,9 +124,10 @@
               </div>
             </div>
 
+
             <div class="col-md-3 position-relative">
               <label for="validationTooltip04" class="form-label">Город доставки</label>
-              <select class="form-select" name="Город" id="validationTooltip04" required>
+              <select class="form-select" name="City" id="validationTooltip04" required>
                 <option selected disabled value="">Выбрать</option>
                 <option>Москва</option>
                 <option>Санкт-Петербург</option>
@@ -106,6 +136,7 @@
                 <option>Пермь</option>
                 <option>Уфа</option>
                 <option>Смоленск</option>
+                <option>Моего города нет в списке</option>
               </select>
               <div class="invalid-tooltip">
                 Неправильный город
@@ -113,7 +144,7 @@
             </div>
             <div class="col-md-3 position-relative">
               <label for="validationTooltip05" class="form-label">Индекс</label>
-              <input type="text" class="form-control" name="Индекс" id="validationTooltip05" required>
+              <input type="number" class="form-control" name="Postal_code" id="validationTooltip05" required>
               <div class="invalid-tooltip">
                 Неправильный город
               </div>
@@ -121,11 +152,26 @@
             <div class="col-md-6 position-relative">
               <label for="validationTooltip03" class="form-label">Адрес (Улица, дом, корпус, строение,
                 квартира)</label>
-              <input name="Адрес" type="text" class="form-control" id="validationTooltip03" required>
+              <input name="Adress" type="text" class="form-control" id="validationTooltip03" required>
               <div class="invalid-tooltip">
                 Please provide a valid city.
               </div>
             </div>
+            <div class="col-md-3 position-relative">
+              <label for="validationTooltip01" class="form-label">Email-адрес</label>
+              <input type="text" class="form-control" id="validationTooltipmilo" placeholder="name@example.com"
+                name="E-mail">
+            </div>
+            <div class="col-md-3 position-relative">
+              <label for="validationTooltipUsername" class="form-label">Номер телефона</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="validationTooltipUsernamePrepend">+7</span>
+                <input type="text" name="Phone" class="form-control" id="validationTooltipUsername"
+                  aria-describedby="validationTooltipUsernamePrepend" required>
+              </div>
+            </div>
+
+
 
 
 
@@ -134,6 +180,68 @@
             </div>
 
           </form>
+          <br>
+          <br>
+
+
+          <table border="5" width="100%" height="400">
+            <caption>Таблица транспортных аггрегаторов в Москве</caption>
+            <tbody>
+              <th style="border: 3px solid black;">Аггрегатор</th>
+              <th style="border: 3px solid black;">Информация по тарифам</th>
+              <th style="border: 3px solid black;">Карта точек в Москве</th>
+
+              <tr>
+                <td style="border: 3px solid black;">СДЭК</td>
+                <td style="border: 3px solid black;"><a href="https://www.cdek.ru/ru/calculate"
+                    target="_blank">Тарифы</a>
+                </td>
+                <td style="border: 3px solid black;"><a
+                    href="https://уголокпокупателя.рф/images/punkti-vidachi-stendov-v-moskve.png" target="_blank"><img
+                      src="https://уголокпокупателя.рф/images/punkti-vidachi-stendov-v-moskve.png" width="100"></a>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 3px solid black;">Boxberry</td>
+                <td style="border: 3px solid black;"><a href="https://boxberry.ru/lpip/?ysclid=lbmwzide4c336596528"
+                    target=" _blank">Тарифы</a></td>
+                <td style="border: 3px solid black;"><a
+                    href="https://boneco-outlet.ru/upload/medialibrary/cee/ceeeac58b6d238bdef93a24858de0f13.jpeg"
+                    target="_blank"><img
+                      src="https://boneco-outlet.ru/upload/medialibrary/cee/ceeeac58b6d238bdef93a24858de0f13.jpeg"
+                      width="100"></a></td>
+              </tr>
+              <tr>
+                <td style="border: 3px solid black;">DHL</td>
+                <td style="border: 3px solid black;"><a href="https://express.dhl.ru/tarify/" target="_blank">Тарифы</a>
+                </td>
+                <td style="border: 3px solid black;"><a
+                    href="https://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1RkDB2DZpqpXKOe_iSg6_YYQaaKTM5SRkZCeTgDn6uOyic"
+                    target="_blank"><img
+                      src="https://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1RkDB2DZpqpXKOe_iSg6_YYQaaKTM5SRkZCeTgDn6uOyic"
+                      width="100"></a></td>
+              </tr>
+              <tr>
+                <td style="border: 3px solid black;">Деловые линии</td>
+                <td style="border: 3px solid black;"><a
+                    href="https://www.dellin.ru/requests/?ysclid=lbmwt01cy9655940938&step=freight&requestType=cargo-single"" target="
+                    _blank">Тарифы<a></td>
+                <td style="border: 3px solid black;"><a href="https://calculator-dostavki.ru/img/punkty-dellin.png"
+                    target="_blank"><img src="https://calculator-dostavki.ru/img/punkty-dellin.png" width="100"></a>
+                </td>
+              </tr>
+
+            </tbody>
+
+
+
+          </table>
+
+
+
+
+
+
 
         </div>
 
@@ -141,10 +249,16 @@
 
 
       <!--Футер страницы-->
-      <div class="card-body; d-flex justify-content-center">
-        <h5 class="card-title">О компании</h5>
-      </div>
-      <!--Конец футера-->
+      <h5 class="card-title" align="center">О компании</h5>
+      <p>За дополнительной информацией можете обращаться по указанным контактам:</p>
+      <a href="https://vk.com/f4c3rxd"><img
+          src="https://www.pinclipart.com/picdir/big/521-5211220_fifa-networking-vkontakte-service-icons-18-axe-clipart.png"
+          align="left" target="_blank" height="50"><a>
+          <a href="https://vk.com/f4c3rxd"><img src="https://cdn-icons-png.flaticon.com/512/408/408839.png" align="left"
+              target="_blank" height="50"></a><br><br><br>
+          Все права защищены
+    </div>
+    <!--Конец футера-->
     </div>
 
 

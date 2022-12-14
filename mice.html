@@ -11,6 +11,46 @@
             body {
                 background-image: url(https://i.sunhome.ru/journal/118/magazin-geimera-v2.orig.jpg);
             }
+
+            .sidenav {
+                height: 25%;
+                width: 205px;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: red;
+                overflow-x: hidden;
+                padding-top: 20px;
+            }
+
+
+            .main {
+                margin-left: 205px;
+
+            }
+
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #f1f1f1;
+                display: block;
+                transition: 0.3s;
+                text-align: left;
+            }
+
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+
+            #main {
+                transition: margin-left .5s;
+                padding: 20px;
+            }
         </style>
     </head>
 
@@ -20,7 +60,9 @@
             <!--Хедер страницы-->
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title" align="center">Интернет-магазин геймерских девайсов NeoFrag</h5>
+                    <a name="Home">
+                        <h5 class="card-title" align="center">Интернет-магазин геймерских девайсов NeoFrag</h5>
+                    </a>
                 </div>
             </div>
 
@@ -34,12 +76,12 @@
                                     alt="домашка" height="20px" width="20px"></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-expanded="false">Каталог</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="./keyboards.html"">Клавиатуры</a></li>
-                                <li><a class=" dropdown-item" href="./mice.html">Мыши</a></li>
-                                <li><a class="dropdown-item" href="./chairs.html">Кресла</a></li>
+                                <li><a class=" dropdown-item active" href="./mice.html">Мыши</a></li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -62,21 +104,261 @@
                         </li>
                     </ul>
                 </div>
-
                 <!--Конец навбара-->
 
-                <!--Основное содержание страницы-->
-                <div class="card-body">
-                    <h5 class="card-title">Мыши</h5>
-                    <p class="card-text">Содержание главной страницы</p>
-                    <a href="https://www.hse.ru/" class="btn btn-primary" target="_blank">Ссылка с главной страницы</a>
+                <!--Боковое меню-->
+                <div id="mySidenav" class="sidenav">
+                    <a href="#Home"> В начало</a>
+                    <a href="#Razer">Мыши Razer</a>
+                    <a href="#Corsair">Мыши Corsair</a>
+                    <a href="#HyperX">Мыши HyperX</a>
                 </div>
+                <!--Боковое меню-->
+
+
+                <!--Основное содержание страницы-->
+                <h5 class="card-title">Мыши</h5>
+                <div class="card-body">
+                    <a name="Razer"></a>
+                    <h6 class="card-title">Мыши Razer</h6></a>
+                    <div class="card-group">
+                        <div class="card">
+                            <a href="https://static.razer.ru/public/7dkWKSAdhhKTwaaHM2bLwk/naga-v2-pro-2-1500x1000-6.jpg"
+                                target="_blank"><img
+                                    src="https://static.razer.ru/public/7dkWKSAdhhKTwaaHM2bLwk/naga-v2-pro-2-1500x1000-6.jpg"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Razer Naga V2 Pro
+                                </h5>
+                                <p class="card-text">Разработанный, чтобы доминировать в MMO, Battle Royale, FPS и
+                                    других играх, многожанровый мастер возвращается сильнее, чем когда-либо. Razer Naga
+                                    V2 Pro
+                                    обладает мощью для достижения вершин в каждом игровом жанре.</p>
+                                <p class="card-text"><small class="text-muted">В наличии: много</small></p>
+                                <p>Цена: 4500 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz1">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <a href="https://static.razer.ru/public/XrLD2ZXzvCDB8enFdXM8t9/basilisk-v3-pro-1500x1000-1.jpg"
+                                target="_blank"><img
+                                    src="https://static.razer.ru/public/XrLD2ZXzvCDB8enFdXM8t9/basilisk-v3-pro-1500x1000-1.jpg"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Razer Basilisk V3 Pro</h5>
+                                <p class="card-text">Встречай
+                                    Вооружись до зубов
+                                    передовыми технологиями, раскрой свой максимальный потенциал с помощью оружия,
+                                    которое раздвигает современные пределы производительности, настройки, подключения и
+                                    контроля.</p>
+                                <p class="card-text"><small class="text-muted">В наличии: достаточно</small></p>
+                                <p>Цена: 6300 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz2">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="https://static.razer.ru/230816/razer-deathadder-v2-pro-gallery-07.jpg"
+                                target="_blank"><img
+                                    src="https://static.razer.ru/230816/razer-deathadder-v2-pro-gallery-07.jpg"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Razer DeathAdder V2 Pro</h5>
+                                <p class="card-text">Более чем 10 миллионов проданных устройств, самая успешная игровая
+                                    мышь всех времен Razer DeathAdder обеспечивает безграничный комфорт. Встречайте
+                                    Razer DeathAdder V2 Pro - беспроводную эргономичную игровую мышь, которая открывает
+                                    новую эру господства благодаря полной свободе движений и контроля.</p>
+                                <p class="card-text"><small class="text-muted">В наличии: мало</small></p>
+                                <p>Цена: 2000 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz3">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <a name="Corsair">
+                        <h6 class="card-title">Мыши Corsair</h6>
+                    </a>
+                    <div class="card-group">
+                        <div class="card">
+                            <a href="https://www.corsair.com/medias/sys_master/images/images/hf3/hd9/9211580743710/-CH-9302211-EU-Gallery-GLAIVE-RGB-PRO-BLACK-01.png"
+                                target="_blank"><img
+                                    src="https://www.corsair.com/medias/sys_master/images/images/hf3/hd9/9211580743710/-CH-9302211-EU-Gallery-GLAIVE-RGB-PRO-BLACK-01.png"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Оптическая игровая мышь Corsair GLAIVE RGB PRO
+                                </h5>
+                                <p class="card-text">Благодаря специально разработанной для долгих сеансов игры особой
+                                    форме и сверхточному оптическому датчику игрового класса с разрешением 18 000 точек
+                                    на дюйм в игровых мышах CORSAIR GLAIVE RGB PRO сочетаются высокая производительность
+                                    и невероятное удобство использования.</p>
+                                <p class="card-text"><small class="text-muted">В наличии: много</small></p>
+                                <p>Цена: 6500 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz4">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="https://www.corsair.com/it/ru/medias/sys_master/images/images/ha5/h4e/9764368252958/base-sabre-rgb-pro-champion/Gallery/CH-9303111_01/-base-sabre-rgb-pro-champion-Gallery-CH-9303111-01.png_1200Wx1200H"
+                                target="_blank"><img
+                                    src="https://www.corsair.com/it/ru/medias/sys_master/images/images/ha5/h4e/9764368252958/base-sabre-rgb-pro-champion/Gallery/CH-9303111_01/-base-sabre-rgb-pro-champion-Gallery-CH-9303111-01.png_1200Wx1200H"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Оптическая игровая мышь SABRE RGB PRO CHAMPION SERIES</h5>
+                                <p class="card-text">Игровая мышь CORSAIR SABRE RGB PRO разработана с учетом пожеланий
+                                    профессиональных киберспортсменов. Ее сверхлегкая конструкция весом всего 74 г и
+                                    гибкий кабель в паракордовой оплетке, снижающей трение, обеспечивают молниеносный
+                                    отклик и беспрепятственное движение.</p>
+                                <p class="card-text"><small class="text-muted">В наличии: достаточно</small></p>
+                                <p>Цена: 4000 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz5">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="https://www.corsair.com/it/ru/medias/sys_master/images/images/h34/heb/10225864146974/base-m65-rgb-ultra-2-config/Gallery/M65_RGB_ULTRA_01/-base-m65-rgb-ultra-2-config-Gallery-M65-RGB-ULTRA-01.png_1200Wx1200H"
+                                target="_blank"><img
+                                    src="https://www.corsair.com/it/ru/medias/sys_master/images/images/h34/heb/10225864146974/base-m65-rgb-ultra-2-config/Gallery/M65_RGB_ULTRA_01/-base-m65-rgb-ultra-2-config-Gallery-M65-RGB-ULTRA-01.png_1200Wx1200H"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Настраиваемая игровая мышь M65 RGB ULTRA
+                                </h5>
+                                <p class="card-text">Пусть все ваши нажатия имеют значение: настраиваемая игровая мышь
+                                    CORSAIR M65 RGB ULTRA обладает прочной алюминиевой конструкцией и невероятной
+                                    точностью, обеспечиваемой оптическим датчиком MARKSMAN с разрешением 26 000 точек на
+                                    дюйм
+                                </p>
+                                <p class="card-text"><small class="text-muted">В наличии: мало</small></p>
+                                <p>Цена: 5000 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz6">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <a name="HyperX">
+                        <h6 class="card-title">Мыши HyperX</h6>
+                    </a>
+                    <div class="card-group">
+                        <div class="card">
+                            <a href="https://c.dns-shop.ru/thumb/st1/fit/wm/0/0/c2e79793bf86452f9527d724f09e4d6a/e87362d10ab4a10da4d7f73ba38fc93f35ae70f0ded91a482dab5ed362b04086.jpg.webp"
+                                target="_blank"><img
+                                    src="https://c.dns-shop.ru/thumb/st1/fit/wm/0/0/c2e79793bf86452f9527d724f09e4d6a/e87362d10ab4a10da4d7f73ba38fc93f35ae70f0ded91a482dab5ed362b04086.jpg.webp"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Мышь проводная HyperX Pulsefire</h5>
+                                <p class="card-text">ышь проводная HyperX Pulsefire CORE HX-MC004B - надежный и удобный
+                                    компьютерный манипулятор, в котором есть все самое необходимое для сокрушительных
+                                    побед в многочисленных видеоиграх. Устройство имеет классическую черную расцветку,
+                                    которая дополнена приятной разноцветной подсветкой.</p>
+                                <p class="card-text"><small class="text-muted">В наличии: много</small></p>
+                                <p>Цена: 3000 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="kb_numb_poz7">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="https://c.dns-shop.ru/thumb/st4/fit/wm/0/0/f42c5812cfb115fca207d0862a9dd425/ea6faabcb3b142db89d88baa2846b930542f30cd008da3763103e0653efa8093.jpg.webp"
+                                target="_blank"><img
+                                    src="https://c.dns-shop.ru/thumb/st4/fit/wm/0/0/f42c5812cfb115fca207d0862a9dd425/ea6faabcb3b142db89d88baa2846b930542f30cd008da3763103e0653efa8093.jpg.webp"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Мышь беспроводная HyperX Pulsefire Dart</h5>
+                                <p class="card-text">Мышь беспроводная HyperX Pulsefire Dart в черном корпусе со
+                                    стильной светодиодной подсветкой может подключаться к компьютерному порту как за
+                                    счет кабеля, так и через USB-ресивер. В этой модели использован оптический
+                                    светодиодный сенсор PixArt PMW3389 с поддержкой разрешения от 800 до 16000 dpi. </p>
+                                <p class="card-text"><small class="text-muted">В наличии: достаточно</small></p>
+                                <p>Цена: 8000 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz8">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="https://c.dns-shop.ru/thumb/st4/fit/wm/0/0/e086a2f67103ff9c7db5af21981ed242/492e3961a15d97ae18daeb540a69f7e4a6259efbe0939185214a4c6934a9facc.jpg.webp"
+                                target="_blank"><img
+                                    src="https://c.dns-shop.ru/thumb/st4/fit/wm/0/0/e086a2f67103ff9c7db5af21981ed242/492e3961a15d97ae18daeb540a69f7e4a6259efbe0939185214a4c6934a9facc.jpg.webp"
+                                    class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <h5 class="card-title">Мышь проводная HyperX Pulsefire Haste
+                                </h5>
+                                <p class="card-text">Мышь проводная HyperX Pulsefire Haste характеризуется высокой
+                                    надежностью и долговечностью. Модель изготовлена из прочного пластика с
+                                    шестигранными углублениями, что обеспечивает надежный хват и дополнительное
+                                    удобство. Манипулятор оснащен чувствительным оптическим датчиком с регулируемым
+                                    разрешением до 16000 dpi. </p>
+                                <p class="card-text"><small class="text-muted">В наличии: мало</small></p>
+                                <p>Цена: 4500 рублей</p>
+                                <form action="http://185.182.111.214:7628/cgi-bin/form_action.py" method='get'
+                                    target='_self'>
+                                    <p>Заказать: <input type="number" name="m_numb_poz9">шт.
+                                    <div class="col-12">
+                                        <button class="btn btn-primary" type="submit">Положить в корзину</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!--Футер страницы-->
-            <div class="card-body; d-flex justify-content-center">
-                <h5 class="card-title">О компании</h5>
-            </div>
-            <!--Конец футера-->
+            <h5 class="card-title" align="center">О компании</h5>
+            <p>За дополнительной информацией можете обращаться по указанным контактам:</p>
+            <a href="https://vk.com/f4c3rxd"><img
+                    src="https://www.pinclipart.com/picdir/big/521-5211220_fifa-networking-vkontakte-service-icons-18-axe-clipart.png"
+                    align="left" target="_blank" height="50"><a>
+                    <a href="https://vk.com/f4c3rxd"><img src="https://cdn-icons-png.flaticon.com/512/408/408839.png"
+                            align="left" target="_blank" height="50"></a><br><br><br>
+                    Все права защищены
+        </div>
+        <!--Конец футера-->
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
